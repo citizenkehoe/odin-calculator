@@ -72,6 +72,6 @@ body {
     color: whitesmoke
 }
 
-#clear {
+#clear, #ac {
     background-color: var(--color5);
 }
