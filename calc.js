@@ -28,6 +28,23 @@ function operate(sign, x, y) {
         case "/":
             divide(x, y);
             break;
-    }
-    
+    }   
 }
+
+let display = document.getElementById('display');
+let displayNumArr = [];
+let displayNum;
+
+function nextDigit() {
+    displayNumArr.push(this.getAttribute('data-num'));
+    displayNum = displayNumArr.join("");
+    display.textContent = displayNum;
+    // return displayNum;
+}
+
+
+let numButtons = document.querySelectorAll('.number');
+
+numButtons.forEach(button => {
+    button.addEventListener('click', nextDigit)
+});
